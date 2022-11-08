@@ -1,0 +1,35 @@
+{
+  "name": "dagon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:korambo/dagon.git",
+  "author": "korambo <korambo359@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint:all": "$(yarn bin)/eslint .",
+    "lint": "$(yarn bin)/eslint src",
+    "tsc": "tsc --noEmit",
+    "start": "webpack-dev-server --config builder/webpack.base.js",
+    "deploy": "webpack --config builder/webpack.prod.js"
+  },
+  "dependencies": {
+    "phaser": "^3.55.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "html-webpack-plugin": "^5.5.0",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

@@ -1,0 +1,13 @@
+.vscode
+Thumbs.db
+.DS_Store
+.idea
+*.suo
+*.sublime-project
+*.sublime-workspace
+
+node_modules
+npm-debug.log
+yarn-error.log
+
+dist

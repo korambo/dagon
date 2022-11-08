@@ -1,0 +1,178 @@
+{
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+            "tsconfig.json"
+        ]
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "globals": {
+        "QUEUE_NAME": true
+    },
+    "env": {
+        "browser": true
+    },
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "parser": "@typescript-eslint/parser",
+            "extends": [
+                "airbnb-typescript/base",
+                "plugin:@typescript-eslint/recommended"
+            ],
+            "plugins": [
+                "@typescript-eslint"
+            ],
+            "rules": {
+                "@typescript-eslint/naming-convention": [
+                    "error",
+                    {
+                        "selector": "interface",
+                        "format": [
+                            "PascalCase"
+                        ],
+                        "custom": {
+                            "regex": "^I[A-Z]",
+                            "match": true
+                        }
+                    },
+                    {
+                        "selector": "typeAlias",
+                        "format": [
+                            "PascalCase"
+                        ],
+                        "custom": {
+                            "regex": "^T[A-Z]",
+                            "match": true
+                        }
+                    }
+                ],
+                "@typescript-eslint/no-inferrable-types": "off",
+                "@typescript-eslint/no-var-requires": "off",
+                "@typescript-eslint/explicit-member-accessibility": [
+                    "error", {
+                        "accessibility": "explicit",
+                        "overrides": {
+                            "constructors": "no-public"
+                        }
+                    }
+                ],
+                "no-use-before-define": "off",
+                "@typescript-eslint/no-use-before-define": [
+                    "error"
+                ],
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+                "@typescript-eslint/indent": [
+                    "error",
+                    4,
+                    {
+                        "SwitchCase": 1
+                    }
+                ],
+                "@typescript-eslint/dot-notation": "off",
+                "@typescript-eslint/no-unused-expressions": "off",
+                "@typescript-eslint/lines-between-class-members": "off",
+                "@typescript-eslint/no-this-alias": "off",
+                "prefer-rest-params": "off",
+                "@typescript-eslint/member-ordering": [
+                    "error",
+                    {
+                        "default": [
+                            "signature",
+                            "private-field",
+                            "protected-field",
+                            "static-field",
+                            "public-field",
+                            "constructor",
+                            "public-static-method",
+                            "public-method",
+                            "protected-static-method",
+                            "protected-method",
+                            "private-static-method",
+                            "private-method"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.spec.ts"],
+            "rules": {
+                "@typescript-eslint/ban-ts-comment": "off"
+            }
+        }
+    ],
+    "rules": {
+        "no-multi-spaces": "off",
+        "no-prototype-builtins": "off",
+        "space-infix-ops": [
+            "error"
+        ],
+        "no-mixed-operators": "off",
+        "no-plusplus": "off",
+        "no-underscore-dangle": "off",
+        "no-case-declarations": "off",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "implicit-arrow-linebreak": [
+            "error",
+            "beside"
+        ],
+        "operator-linebreak": [
+            "error",
+            "before",
+            {
+                "overrides": {
+                    "+=": "none",
+                    "-=": "none",
+                    "=": "none"
+                }
+            }
+        ],
+        "no-restricted-globals": "off",
+        "no-console": "error",
+        "camelcase": "off",
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-unresolved": 0,
+        "import/no-named-as-default": "off",
+        "import/prefer-default-export": "off",
+        "class-methods-use-this": "off",
+        "arrow-parens": "off",
+        "no-constructor-return": "off",
+        "prefer-destructuring": "off",
+        "prefer-object-spread": "off",
+        "no-unsafe-optional-chaining": "off",
+        "object-curly-newline": "off",
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "default-param-last": "off",
+        "function-paren-newline": "off",
+        "no-multiple-empty-lines": "error",
+        "func-names": "off",
+        "import/no-import-module-exports": "off",
+        "prefer-promise-reject-errors": "off",
+        "max-len": [
+            "error",
+            110
+        ],
+        "no-bitwise": "off",
+        "max-classes-per-file": "off",
+        "prefer-rest-params": "off",
+        "quote-props": "off",
+        "default-case": "off",
+        "no-var": "off",
+        "guard-for-in": "off",
+        "no-restricted-syntax": "off",
+        "no-continue": "off",
+        "no-param-reassign": ["error", { "props": false }]
+    }
+}
